@@ -20,7 +20,7 @@ DEBUG_MSG_CODES = {
     "114": "Invalid Token Data",
     "115": "Controller Allowed Roles Not Found",
     "116": "Resource Access Denied",
-    "117": "Role Not Found"from authz.config.config import Configb
+    "117": "Role Not Found"
 }
 
 def jsonify(state={}, metadate={}, status=200, code=100, headers={}):
