@@ -1,13 +1,14 @@
+from authz.model import User
 from authz.util import jsonify
 
 class UserController:
     def get_users():
-        pass
+        return jsonify(status=501, code=107)
     def get_user(user_id):
-        pass
+        return jsonify(status=501, code=107)
     def create_user():
-        pass
+        return jsonify(status=501, code=107)
     def update_user(user_id):
-        pass
+        return jsonify(status=501, code=107)
     def delete_user(user_id):
-        pass
+        return jsonify(status=501, code=107)
