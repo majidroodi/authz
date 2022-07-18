@@ -1,10 +1,12 @@
 from uuid import uuid4
+
 from authz.authz import db
 from authz.config import Config
 from authz.util import now, user_expires_at
 
-class User(db.model):
-    id = db.Column(db.String(64), Primeary_key=True, default=lambda : uuid4().hex)
+class User(db.Model):
+    
+    id = db.Column(db.String(64), primary_key=True, default=lambda : uuid4().hex)
     username = db.Column(db.String(128), unique=True, index=True, nullable=False)
     password = db.Column(db.String(256), nullable=False)
     role = db.Column(db.String(32), nullable=False, default=Config.USER_DEFAULT_ROLE)
